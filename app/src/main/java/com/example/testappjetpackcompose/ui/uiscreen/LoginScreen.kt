@@ -1,4 +1,4 @@
-package com.example.testappjetpackcompose.ui.theme
+package com.example.testappjetpackcompose.ui.uiscreen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -22,6 +22,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import com.example.testappjetpackcompose.R
 import compose.icons.FontAwesomeIcons
 import compose.icons.fontawesomeicons.Brands
@@ -31,7 +32,7 @@ import compose.icons.fontawesomeicons.brands.Google
 
 
 @Composable
-fun LoginScreen() {
+fun LoginScreen(navController: NavHostController) {
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
@@ -63,7 +64,9 @@ fun LoginScreen() {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        Button(onClick = {}) {
+        Button(onClick = {
+            navController.navigate("four")
+        }) {
             Text(text = "Login")
         }
 
@@ -74,7 +77,6 @@ fun LoginScreen() {
         }
 
         Spacer(modifier = Modifier.height(32.dp))
-
 
         Text(text = "Or sign in with", modifier = Modifier.clickable {
 
@@ -100,15 +102,12 @@ fun LoginScreen() {
 
             Spacer(modifier = Modifier.width(32.dp))
 
-
             Icon(
                 imageVector = FontAwesomeIcons.Brands.Facebook,
                 modifier = Modifier.size(40.dp),
                 contentDescription = "Facebook Icon"
             )
-
         }
-
 
     }
 }
