@@ -30,7 +30,6 @@ import compose.icons.fontawesomeicons.brands.Facebook
 import compose.icons.fontawesomeicons.brands.Github
 import compose.icons.fontawesomeicons.brands.Google
 
-
 @Composable
 fun LoginScreen(navController: NavHostController) {
     Column(

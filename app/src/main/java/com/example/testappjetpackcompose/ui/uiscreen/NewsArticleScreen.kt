@@ -18,7 +18,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.ViewModelProvider
@@ -47,7 +46,7 @@ fun NewsArticleScreen(navController: NavHostController, mainActivity: MainActivi
                 fontFamily = FontFamily.SansSerif
             )
 
-            NewsArticleTopLineHomePage(newsTopLevelViewModel)
+            NewsArticleTopLineHomePage(newsTopLevelViewModel , navController)
         }
 
     }
