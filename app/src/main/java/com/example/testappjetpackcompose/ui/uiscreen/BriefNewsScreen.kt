@@ -58,6 +58,17 @@ fun BriefNews(mainActivity: MainActivity, pos: Int) {
                 ) {
 
                     Text(
+                        text = "News Now",
+                        modifier = Modifier.align(Alignment.CenterHorizontally),
+                        color = Color.Red,
+                        fontSize = 25.sp,
+                        fontFamily = FontFamily.SansSerif
+                    )
+
+                    Spacer(modifier = Modifier.fillMaxHeight(.01f))
+
+
+                    Text(
                         text = articles[pos].title,
                         Modifier.padding(8.dp),
                         fontWeight = FontWeight.Bold,
@@ -82,15 +93,18 @@ fun BriefNews(mainActivity: MainActivity, pos: Int) {
                     Text(
                         text = articles[pos].description,
                         fontWeight = FontWeight.Bold,
+                        color = Color.Red,
+                        fontSize = 25.sp
 
-                    )
+
+                        )
 
                     Spacer(modifier = Modifier.fillMaxHeight(.01f))
 
                     Text(
                         text = articles[pos].publishedAt,
                         fontWeight = FontWeight.Bold,
-                        maxLines = 3
+                        maxLines = 3,
                     )
                     Spacer(modifier = Modifier.fillMaxHeight(.01f))
 
