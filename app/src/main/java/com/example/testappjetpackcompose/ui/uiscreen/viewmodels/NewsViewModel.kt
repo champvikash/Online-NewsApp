@@ -9,7 +9,6 @@ import com.kwabenaberko.newsapilib.models.Article
 import com.kwabenaberko.newsapilib.models.request.EverythingRequest
 import com.kwabenaberko.newsapilib.models.request.TopHeadlinesRequest
 import com.kwabenaberko.newsapilib.models.response.ArticleResponse
-import retrofit2.http.Query
 
 class NewsViewModel() : ViewModel() {
 

@@ -24,7 +24,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            MyApp(this@MainActivity, auth)
+            MyApp(this@MainActivity, auth , db)
         }
     }
 }

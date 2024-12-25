@@ -13,17 +13,18 @@ import com.example.testappjetpackcompose.ui.uiscreen.NewsArticleScreen
 import com.example.testappjetpackcompose.ui.uiscreen.RegisterScreen
 import com.example.testappjetpackcompose.ui.uiscreen.SplashScreen
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 
 
 @Composable
-fun MyApp(mainActivity: MainActivity, auth: FirebaseAuth) {
+fun MyApp(mainActivity: MainActivity, auth: FirebaseAuth, db: FirebaseDatabase) {
     val navController = rememberNavController()
 
 
     NavHost(navController = navController, startDestination = "first") {
         composable("first") { SplashScreen(navController) }
-        composable("second") { RegisterScreen(navController , mainActivity , auth) }
-        composable("third") { LoginScreen(navController) }
+        composable("second") { RegisterScreen(navController , mainActivity , auth , db) }
+        composable("third") { LoginScreen(navController , auth , db , mainActivity) }
         composable("four") { NewsArticleScreen(navController, mainActivity) }
         composable(
             "fifth/{pos}",

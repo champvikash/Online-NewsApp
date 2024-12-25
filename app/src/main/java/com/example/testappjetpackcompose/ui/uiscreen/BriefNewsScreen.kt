@@ -51,7 +51,7 @@ fun BriefNews(mainActivity: MainActivity, pos: Int) {
                     .padding(16.dp),
                 shape = RoundedCornerShape(12.dp),
                 elevation = CardDefaults.cardElevation(8.dp),
-                colors = CardDefaults.cardColors(containerColor = Color.Cyan)
+                colors = CardDefaults.cardColors(containerColor = Color.Gray)
             ) {
                 Column(
                     modifier = Modifier.fillMaxSize()
